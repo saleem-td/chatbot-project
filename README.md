@@ -23,8 +23,6 @@ Stage 3 - Chatbot with Chat History
 
 In this stage, we enhance our basic chatbot, built with Streamlit and FastAPI, by adding chat history storage. Now, conversations are saved locally, and session details are logged in a PostgreSQL database, allowing users to continue their chats seamlessly.
 
-stage3
-
 Specifically, we store the chat ID, chat name, and file path of each conversation in PostgreSQL. Whenever the chatbot is reopened, it automatically retrieves the previous chat history, providing a smoother user experience.
 
 By separating responsibilities—Streamlit for the frontend, FastAPI for backend logic, and PostgreSQL for data storage—we ensure a flexible and maintainable architecture. Each component can be updated or replaced independently, making it easier to extend functionality without affecting the overall system. Additionally, this structure lays the foundation for a smooth transition to cloud deployment in future stages.
