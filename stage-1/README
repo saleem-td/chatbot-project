@@ -1,12 +1,1 @@
-Stage 1 - Basic Chatbot
-
-A basic chatbot using streamlit and openai api.
-
-![Alt text](../assets/St-1.png)
-
-Store your `OPENAI_API_KEY` in `.env` file. Run
-
-```
-streamlit run chatbot.py
-```
-to run the app.
+![Alt text](https://github.com/saleem-td/chatbot-project/blob/main/assets/St-1.png?raw=true)
