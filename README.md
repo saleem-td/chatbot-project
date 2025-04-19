@@ -7,7 +7,7 @@ At this stage, the chatbot runs entirely on the frontend, meaning Streamlit dire
 
 ---
 
-Stage 2 - Basic Chatbot with FastAPI
+# Stage 2 - Basic Chatbot with FastAPI
 
 In this stage, we enhance our basic chatbot by introducing FastAPI as a backend service. Instead of making direct calls to the OpenAI API from the frontend, we now handle these requests through the FastAPI backend.
 
@@ -19,7 +19,7 @@ By separating responsibilities, the frontend focuses on user interaction and ses
 
 ---
 
-Stage 3 - Chatbot with Chat History
+# Stage 3 - Chatbot with Chat History
 
 In this stage, we enhance our basic chatbot, built with Streamlit and FastAPI, by adding chat history storage. Now, conversations are saved locally, and session details are logged in a PostgreSQL database, allowing users to continue their chats seamlessly.
 
@@ -31,7 +31,7 @@ By separating responsibilities—Streamlit for the frontend, FastAPI for backend
 
 ---
 
-Stage 4 - Chatbot with Chat History
+# Stage 4 - Chatbot with Chat History
 
 A RAG (Retrieval-Augmented Generation) chatbot using Streamlit and FastAPI. At this stage, we introduce the ability for users to upload PDF files in addition to regular chatting. This allows them to ask questions specifically about the content of those documents.
 
@@ -43,7 +43,7 @@ This enhancement integrates seamlessly with our existing setup—Streamlit for t
 
 ---
 
-Project Stage 5: Moving to Azure VM Manually
+# Project Stage 5: Moving to Azure VM Manually
 
 At this stage, we will move our application to an Azure VM. We’ll create a new VM and deploy our databases, frontend, and backend services on it. Additionally, we will manually set up the following components: an Azure network security group, an Azure Virtual Network, a public IP address, a subnet, a disk, and a network interface. Note that we will not use Infrastructure as Code (IaC) at this stage; everything will be set up manually.
 
@@ -51,7 +51,7 @@ At this stage, we will move our application to an Azure VM. We’ll create a new
 
 ---
 
-Project Stage 6: Postgres and Blob Storage on Azure
+# Project Stage 6: Postgres and Blob Storage on Azure
 
 Based on Stage 5, we are adding two new resources to the infrastructure: an Azure Database for PostgreSQL server and Azure Blob Storage. Instead of running PostgreSQL on the VM, we’ll use the Azure Database for PostgreSQL server for data storage, and files will be stored in Azure Blob Storage.
 
@@ -59,7 +59,7 @@ Based on Stage 5, we are adding two new resources to the infrastructure: an Azur
 
 ---
 
-Project Stage 6.1: Application Gateway and VMSS on Azure
+# Project Stage 6.1: Application Gateway and VMSS on Azure
 
 Based on Stage 6, we are adding two new resources to the infrastructure: an Azure Application Gateway and a Virtual Machine Scale Set (VMSS). The Azure Application Gateway will redirect traffic to the VMSS, which will host our application.
 
@@ -71,14 +71,14 @@ The frontend and backend services will be deployed on the VMSS. In order to do t
 
 ---
 
-Project Stage 5: Moving to Azure VM with Terraform
+# Project Stage 5: Moving to Azure VM with Terraform
 At this stage, we will use Terraform
 
 <img src="/assets/St-5.png" width="650"/>
 
 ---
 
-Project Stage 6: Postgres and Blob Storage on Azure with Terraform
+# Project Stage 6: Postgres and Blob Storage on Azure with Terraform
 
 Based on Stage 5, we are adding two new scripts: db.tf and storage.tf to provision an Azure Database for PostgreSQL server and Azure Blob Storage. Instead of running PostgreSQL on the VM, we’ll use the Azure Database for PostgreSQL server for data storage, and files will be stored in Azure Blob Storage.
 
@@ -90,8 +90,7 @@ In the end, you should be able to access the application via the VM’s public I
 
 ---
 
-Project Stage 6.1: Application Gateway and VMSS on Azure with Terraform
-
+# Project Stage 6.1: Application Gateway and VMSS on Azure with Terraform
 
 Based on Stage 6, we are adding two new scripts: VMSS.tf and application-gateway.tf to provision a Virtual Machine Scale Set (VMSS) and an Azure Application Gateway. Additionally, the network.tf script will be updated to add a new subnet, a security group, and the necessary security rule. The Application Gateway will redirect traffic to the VMSS, which will host our application.
 
@@ -103,7 +102,7 @@ In the end, you should be able to access the application via the Application Gat
 
 ---
 
-Project Stage 6.5: Azure Key Vault on Azure
+# Project Stage 6.5: Azure Key Vault on Azure
 
 Based on Stage 6.1, we are adding Azure Key Vault to the infrastructure. The Azure Key Vault will store the secrets and environment variables for the application. The secrets and environment variables will be retrieved from the Key Vault during the application deployment process.
 
@@ -115,7 +114,7 @@ In the end, you should be able to access the application via the Application Gat
 
 ---
 
-Project Stage 7: Azure Function App
+# Project Stage 7: Azure Function App
 
 Based on Stage 6.5, we are replacing the Azure Application Gateway and VMSS with Azure Function App. The Azure Function App will host the backend of the application. The VM will be used to host the frontend and ChromaDB. At this stage, we should create and setup infrastructure in this diagram manually.
 
@@ -128,7 +127,7 @@ In the end, you should be able to access the application via the VM's public IP 
 
 ---
 
-Project Stage 8: Azure Cosmos DB
+# Project Stage 8: Azure Cosmos DB
 
 Based on Stage 7, we are adding an Azure Cosmos DB to the infrastructure. The Azure Cosmos DB will store the chat history of the application. At this stage, we should create and setup infrastructure in this diagram manually. The primary key of the Cosmos DB should be stored in the Key Vault.
 
