@@ -1,1 +1,1 @@
-<img src="St-1.png" width="400"/>
+<img src="assets/St-1.png" width="350"/>
