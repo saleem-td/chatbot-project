@@ -1,1 +1,1 @@
-![Stage 1 Screenshot](../assets/St-4.png)
+<img src="St-1.png" width="400"/>
